@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+body {
+  background-color: #ddd;
+}
+
+h1 {
+  font-size: 80px;
+  text-align: center;
+  text-shadow: 1px 1px 2px #fff;
+}
+
+.container {
+  width: 600px;
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, .3);
+  border-radius: 5px;
+}
+
+.gallery li {
+  list-style: none;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  /* overflow: hidden; */
+  border: 5px solid #888;
+  float: left;
+  margin-right: 20px;
+  position: relative;
+}
+
+.gallery li span {
+  display: block;
+  width: 120px;
+  height: 120px;
+  background-color: rgba(200, 200, 200, 0.5);
+  border-radius: 50%;
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  line-height: 120px;
+  color: #333;
+  text-shadow: 1px 1px 1px #ddd;
+  opacity: 0;
+  transform: scale(0) rotate(0);
+  transition: .3s;
+}
+
+.gallery li a:hover span {
+  opacity: 1;
+  transform: scale(1) rotate(360deg);
+}
+
+.clear {
+  clear: both;
+}
+
+.gallery li img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
