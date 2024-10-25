@@ -100,17 +100,19 @@ h1 {
 }
 
 .overlay:target img {
-  animation: zomDanFadein 1s;
+  animation: fade 1s;
 }
 
 .overlay .close {
   position: absolute;
-  top: 70px;
+  top: 60px;
   left: 50%;
   margin-left: -20px;
   color: #fff;
   text-decoration: none;
   background-color: black;
+  border: 2px solid #fff;
+  border-radius: 5px;
   line-height: 14px;
   padding: 5px;
   opacity: 0;
@@ -118,6 +120,24 @@ h1 {
 
 .overlay:target .close {
   animation: slideonFade .5s .5s forwards;
+}
+
+.gallery .overlay .next,
+.gallery .overlay .prev {
+  position: absolute;
+  top: 45%;
+  margin-left: 20px;
+  color: #fff;
+  opacity: 0;
+}
+
+.gallery .overlay .prev {
+  margin-left: -70px;
+}
+
+.overlay:target .next,
+.overlay:target .prev {
+  animation: fade .5s .7s forwards;
 }
 
 /* Animasi */
@@ -139,5 +159,13 @@ h1 {
   } 100% {
     opacity: 1;
     margin-top: 0;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  } 100% {
+    opacity: 1;
   }
 }
